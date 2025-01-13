@@ -34,18 +34,22 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .main {
   width: 50rem;
+  max-width: 100%;
 }
 
 .app-header {
-  width: 66rem;
-  margin-bottom: 2rem;
+  width: 65rem;
+  max-width: 90%;
+  margin-bottom: 1.5rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .error {
@@ -82,7 +86,24 @@ h4 {
   font-weight: 600;
   margin-bottom: 2rem;
 }
-
+@media (max-width: 767px) {
+  img {
+    width: 8rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+}
 .start {
   display: flex;
   flex-direction: column;
@@ -143,17 +164,30 @@ progress {
 .btn-ui {
   float: right;
 }
+@media (max-width: 767px) {
+  .btn-ui {
+    font-size: 1.2rem;
+    padding: 1.1rem 2.4rem;
+  }
+}
 
 .options {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
+  transition: 0.3s;
 }
 
 .btn-option {
   width: 100%;
   text-align: left;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .btn-option {
+    font-size: 14px;
+  }
 }
 
 .btn-option.correct {
@@ -169,6 +203,12 @@ progress {
 
 .answer {
   transform: translateX(2rem);
+  transition: 0.3s;
+}
+@media (max-width: 767px) {
+  .answer {
+    transform: translateX(1.2rem);
+  }
 }
 
 .result {
@@ -192,6 +232,20 @@ progress {
   text-align: center;
   margin-bottom: 4.8rem;
 }
+@media (max-width: 767px) {
+  .result {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .result span {
+    font-size: 1.4rem;
+    margin-right: 3px;
+  }
+  .highscore {
+    font-size: 1.2rem;
+    margin-bottom: 2.4rem;
+  }
+}
 
 .loader-container {
   display: flex;
@@ -211,6 +265,12 @@ progress {
   border: 2px solid var(--color-dark);
   padding: 1.35rem 2.8rem;
   border-radius: 100px;
+}
+@media (max-width: 767px) {
+  .timer {
+    font-size: 1.2rem;
+    padding: 1.1rem 2.4rem;
+  }
 }
 
 /* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
